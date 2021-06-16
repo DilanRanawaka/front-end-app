@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700');
+
+:root{
+  --header-bg: white;
+  --header-color:black;
+  --main-bg:white; 
+  --operators-bg:rgb(218, 216, 216);
+  --operators-bg-hover:rgb(167, 167, 167);
+  --all-btn-bg:white;
+  --all-btn-hover:rgb(218, 216, 216);
+  --all-btn-text-color:black;
+  --all-equal-btn-bg:rgb(167, 167, 167);
+ 
+}
+
+[data-theme="dark"]{
+  --header-bg: rgb(77, 77, 77);
+  --header-color:white;
+  --main-bg:rgb(77, 77, 77);
+  --operators-bg:rgb(116, 115, 115);
+  --operators-bg-hover: rgb(49, 48, 48);
+  --all-btn-bg:rgb(77, 77, 77);
+  --all-btn-hover:rgb(116, 115, 115);
+  --all-btn-text-color:white;
+  --all-equal-btn-bg:rgb(49, 48, 48);
+
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: "Roboto Mono";
+}
+
+.title{
+  text-align: center;
+  font-size: 35px;
+  margin-top: 5px;
+}
+
+.calculator {
+  margin: auto;
+  margin-top: 2%;
+  width: 336px;    
+  border-radius: 10px;
+  box-shadow: 0 0 3em #cdcdcd;
+}
+
+header {
+  padding: 20px;
+  background: var(--header-bg);
+  color: var(--header-color);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: right;
+  height: 100px;
+}
+
+header #current{
+  font-size: 2em;
+  color: rgb(22, 211, 101);
+}
+
+#keys {
+  height: 100%;
+  background: var(--main-bg);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: auto;
+}
+
+#keys .operators{
+  background-color:var(--operators-bg);
+  border-radius: 20px;
+  margin-top: 2px;
+  float: right;  
+}
+
+#keys .operators:hover{
+    background-color:var(--operators-bg-hover);
+
+}
+
+#keys .numbers{
+    margin-top: 2px;
+    margin-left: 3px;
+}
+
+#keys #all_clear{
+   width: 25%;
+    margin-top: 2px;
+}
+
+#keys #clear{
+    width: 25%;
+    margin-top: 2px;
+}
+
+#keys #plus-minus{
+  width: 25%;
+  margin-top: 2px;
+}
+
+
+
+#keys button {
+    font-size: 1.2em;
+    font-family: "Roboto Mono";
+    float: left;
+    width: 24%;
+    border: 0;
+    padding: 1em;
+    cursor: pointer;
+    background: var(--all-btn-bg);
+    border-radius: 10px;
+    color: var(--all-btn-text-color);
+}
+
+#keys button:hover {
+    background: var(--all-btn-hover);
+    transition: .4s all;
+}
+
+#keys button:active {
+    box-shadow: 0 0 5px #cdcdcd;
+}
+
+.equal {
+    width: 160px !important;
+    background: var(--all-equal-btn-bg) !important;
+}
+
+hr { 
+  height: 0.5px;
+  border-top: 1px solid rgb(77, 77, 77);
+  margin: 0; 
+  padding: 0;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.switch em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+  
+.theme-switch {
+    display: inline-block;
+    height: 16px;
+    position: relative;
+    width: 50px;
+    margin-right: 12px;
+}
+  
+.theme-switch input {
+    display: none;
+}
+  
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+  
+.slider:before {
+    background-color: black;
+    content: "";
+    bottom: -5px;
+    height: 26px;
+    left: 0px;
+    right: 25px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+  
+input:checked + .slider {
+    background-color: rgba(14, 13, 13, 0.479);
+}
+  
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
