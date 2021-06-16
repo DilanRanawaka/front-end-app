@@ -1,0 +1,42 @@
+.main{
+  text-align: center;
+}
+
+.navbar{
+  background-color: white !important;
+  font-weight: bold;
+  border-bottom: 1px solid rgb(184, 178, 178) ;
+}
+
+.main-topic{
+  font-weight: bold;
+}
+
+.btn {
+  border-color: #8064A2 !important;
+  
+}
+
+.btn-primary{
+  background-color: #8064A2;
+}
+
+.btn:hover{
+  background-color: #8064A2 !important;
+  color: white;
+}
+
+.btn-outline-primary{
+  color: #8064A2;
+}
+
+.aligncenter{
+  text-align: center;
+}
+
+@media screen and (max-width: 460px) {
+  .setwidth{
+      display: block;
+      width: 100%;
+  }
+}
